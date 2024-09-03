@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}" >
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <header class="page-header">
+        <span class="header-bullets"></span>
+        <span class="header-bullets"></span>
+        <span class="header-bullets"></span>
+    </header>
+
+    <main>
+        
+        <h2>Matricula de Aluno</h2>
+    
+        <form method="post">
+            {% csrf_token %}
+        {{form.as_p}}
+    
+            <button type="submit">Cadastrar</button>
+        </form>
+    
+        </main>
+    </body>
+    </html>

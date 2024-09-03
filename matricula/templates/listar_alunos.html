@@ -1,0 +1,38 @@
+<!-- alunos/templates/alunos/listar_alunos.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Alunos</title>
+</head>
+
+
+
+<body>
+    <h1>Alunos Cadastrados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>endereço</th>
+                <th>email</th>
+                <th>curso</th>
+                <th>sexo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.endereço}}</td>
+                <td>{{ aluno.email }}</td>
+                <td>{{ aluno.curso }}</td>
+                <td>{{ aluno.sexo }}</td>
+            </tr>
+            {% endfor %}
+           
+        </tbody>
+    </table>
+</body>
+</html>
